@@ -1,0 +1,27 @@
+{
+	"name": "jadb/s3sync",
+	"description": "Library that helps syncing with Amazon's S3.",
+	"type": "library",
+	"homepage": "http://github.com/jadb/php-s3sync",
+	"license": "MIT",
+	"keywords": ["s3", "sync", "upload", "amazon"],
+	"authors": [
+		{
+			"name": "Jad Bitar",
+			"homepage": "http://jadb.io",
+			"role": "Author"
+		},
+		{
+			"name": "Community",
+			"homepage": "https://github.com/jadb/php-s3sync/graphs/contributors"
+		}
+	],
+  "support": {
+    "issues": "https://github.com/jadb/php-s3sync/issues",
+    "source": "https://github.com/jadb/php-s3sync/"
+  },
+	"require": {
+		"amazonwebservices/aws-sdk-for-php": "1.6.0",
+		"composer/installers": "*"
+	}
+}

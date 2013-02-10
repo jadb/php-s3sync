@@ -1,0 +1,19 @@
+#!/usr/local/bin/php
+
+<?php
+require 'S3Sync.php';
+
+if ($argc < 3 || $argc > 5) {
+	echo "\nSync all files in a directory against an S3 instance.\n\n";
+	echo "Usage: s3sync bucket relative/path [dry] [verbose]";
+	exit(1);
+}
+
+foreach (array(3,4) as $k) {
+	if (!empty($argv[$k])) {
+		${$argv[$k]} = true;
+	}
+}
+
+$S3Sync = new \JadB\S3Sync($argv[1], $argv[2], $dry, $verbose);
+$S3Sync->sync();
